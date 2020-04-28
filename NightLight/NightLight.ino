@@ -55,6 +55,7 @@ int _currentInputVal = 0;
 const int INTERVAL_IN_MS = 200; // interval at which to blink (in milliseconds)
 
 boolean _isFrogMode = false;
+int _greenVal = 0; // toggles between 0 and 255
 unsigned long _lastToggledTimestampMs = 0; // tracks the last time the LED was updated
 
 
@@ -96,7 +97,8 @@ void loop() {
   // Toggle between frog mode whenever frog button is presssed
   if (digitalRead(FROG_PIN) == LOW) {
     _isFrogMode = !_isFrogMode;
-    delay(200); // delay after button is pressed
+    setColor(0, 0, 0); // reset RGB LED to off
+    delay(500); // delay after button is pressed
   }
 
   if (_isFrogMode) { // frog mode overrides all other modes
@@ -108,7 +110,6 @@ void loop() {
   } else if (_buttonMode == 3) {
     handleLoFiInput();
   }
-
   delay(20);
 }
 
@@ -188,12 +189,11 @@ void handleLoFiInput() {
 void frogMode() {
   // Get the current time since the Arduino started our program (in ms)
   unsigned long currentTimestampMs = millis();
-  int greenVal = 0; // toggles between 0 and 255
-  
+    
   // Check to see if time since the LED was last toggled exceeds the interval
   if (currentTimestampMs - _lastToggledTimestampMs >= INTERVAL_IN_MS) {
-    greenVal = greenVal == 0 ? 255 : 0; // toggle the LED
+    _greenVal = _greenVal == 0 ? 255 : 0; // toggle the LED
     _lastToggledTimestampMs = currentTimestampMs; // store current time as toggle time
-    setColor(0, greenVal, 0);
+    setColor(0, _greenVal, 0);
   }
 }
