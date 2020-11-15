@@ -24,6 +24,6 @@ This project gave me a lot of hands-on experience with a wide range of sensors. 
 
 ### Links
 
-- [Code](https://github.com/emeersman/cse590/tree/master/NightLight)
+- [Slide deck](https://docs.google.com/presentation/d/1ftNE5EDQNSa49ZbwteBGeZeEAb3FS483XhTf2g5VBug/edit?usp=sharing)
 - [Video](https://drive.google.com/file/d/1Bl_fUCUqefV3wg519NLwhM8FjxQhrphG/view?usp=sharing)
 

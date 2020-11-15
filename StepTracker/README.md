@@ -23,8 +23,8 @@ Throughout the assignment, I found so many places where I wanted to add more fun
 
 ### Links
 
-- [Code](https://github.com/emeersman/cse590/tree/master/StepTracker)
 - [Video](https://drive.google.com/open?id=1KJFUtvIc9BwxluaNcBnbTybWzPCVGRyq)
+- [Slide deck](https://peasandcrayons.com/2019/11/instant-pot-stuffing.html)
 - [OLED code inspired by](https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples)
 - [Signal smoothing code](https://www.arduino.cc/en/tutorial/smoothing)
 - [Peak detection code](https://colab.research.google.com/github/makeabilitylab/signals/blob/master/Projects/StepTracker/StepTracker-Exercises.ipynb)
